@@ -1,3 +1,4 @@
+name: "Publish: Visual Studio Marketplace"
 on:
   workflow_dispatch:
   push:
