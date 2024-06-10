@@ -18,6 +18,8 @@ jobs:
         with:
           node-version: 20
       - run: npm install
+      - name: Install vsce
+        run: npm install -g @vscode/vsce
       - name: Publish
         if: success()
         run: vsce publish patch -p ${{ secrets.VSCE_PAT }}

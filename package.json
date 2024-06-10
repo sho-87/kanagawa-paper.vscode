@@ -43,8 +43,5 @@
         "path": "./themes/kanagawa-wave-color-theme.json"
       }
     ]
-  },
-  "devDependencies": {
-    "@vscode/vsce": "^2.27.0"
   }
 }
