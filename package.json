@@ -31,14 +31,12 @@
   "contributes": {
     "themes": [
       {
-        "label": "Kanagawa",
-        "id": "Paper",
+        "label": "Kanagawa Paper",
         "uiTheme": "vs-dark",
         "path": "./themes/kanagawa-paper-color-theme.json"
       },
       {
-        "label": "Kanagawa",
-        "id": "Wave",
+        "label": "Kanagawa Wave",
         "uiTheme": "vs-dark",
         "path": "./themes/kanagawa-wave-color-theme.json"
       }
