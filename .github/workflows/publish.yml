@@ -23,7 +23,5 @@ jobs:
       - name: Publish
         if: success()
         run: "vsce publish patch -p ${{ secrets.VSCE_PAT }} -m 'build: version bump to %s'"
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "build: version bump"
-          branch: ${{ github.head_ref }}
+      - name: Git Push
+        run: git push && git push --tags
