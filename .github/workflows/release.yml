@@ -1,5 +1,6 @@
 name: "Create release"
 on:
+  workflow_dispatch:
   push:
     tags:
       - "v*.*.*"
@@ -14,6 +15,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
+          token: ${{ secrets.PUSH_PAT }}
           draft: false
           generate_release_notes: true
           make_latest: true
