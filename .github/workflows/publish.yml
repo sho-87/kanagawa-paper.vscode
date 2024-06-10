@@ -6,6 +6,10 @@ on:
       - main
     paths-ignore:
       - 'package.json'
+      - '.gitignore'
+      - '.vscodeignore'
+      - '.github/**'
+      - '.vscode/**'
 jobs:
   publish:
     runs-on: ubuntu-latest
