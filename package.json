@@ -45,7 +45,7 @@
     ]
   },
   "scripts": {
-    "deploy": "vsce publish minor --yarn"
+    "deploy": "vsce publish patch"
   },
   "devDependencies": {
     "@vscode/vsce": "^2.27.0"
