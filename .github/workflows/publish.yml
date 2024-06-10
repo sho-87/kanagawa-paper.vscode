@@ -17,14 +17,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install
+      - run: npm ci
       - name: Install vsce
         run: npm install -g @vscode/vsce
       - name: Publish
         if: success()
-        run: vsce publish patch -p ${{ secrets.VSCE_PAT }}
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "ci: increment version number"
-          branch: ${{ github.head_ref }}
+        run: "vsce publish patch -p ${{ secrets.VSCE_PAT }} -m 'build: version bump to %s'"
